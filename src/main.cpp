@@ -3,19 +3,16 @@
 #include "../include/StateManager.h"
 #include "../include/MenuState.h"
 #include "../include/GameState.h"
+#include "../include/game.h"
 
 int main(void)
 {
 
-    const int screenWidth = 1200;
-    const int screenHeight = 850;
     StateManager *stateManager = StateManager::getInstance();
+    Game game;
+    game.Init();
+    game.CenterWindow();
     stateManager->currentState = new MenuState();
-
-    InitWindow(screenWidth, screenHeight, "Contest");
-
-    SetTargetFPS(60);
-
     while (!WindowShouldClose())
     {
         if (IsKeyPressed(KEY_A))
