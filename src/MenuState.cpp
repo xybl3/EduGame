@@ -21,7 +21,6 @@ void MenuState::Draw()
 
     if (this->buttons.RenderButton({(float)GetScreenWidth() / 3, (float)GetScreenHeight() / 2}, 300, 50, RED, "NExt", WHITE))
     {
-        std::cout << "FUCK!" << std::endl;
         this->stateManager->SwitchState(new GameState());
     }
     ClearBackground(BLANK);
