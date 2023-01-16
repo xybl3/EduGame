@@ -3,9 +3,14 @@
 #include <iostream>
 #include "../include/GameState.h"
 
+MenuState::MenuState()
+{
+    this->stateManager = StateManager::getInstance();
+}
+
 void MenuState::Update()
 {
-    std::cout << true << std::endl;
+    // std::cout << true << std::endl;
 }
 
 void MenuState::Draw()
@@ -17,7 +22,7 @@ void MenuState::Draw()
     if (this->buttons.RenderButton({(float)GetScreenWidth() / 3, (float)GetScreenHeight() / 2}, 300, 50, RED, "NExt", WHITE))
     {
         std::cout << "FUCK!" << std::endl;
-        this->stateManager.SwitchState(new GameState());
+        this->stateManager->SwitchState(new GameState());
     }
     ClearBackground(BLANK);
     EndDrawing();

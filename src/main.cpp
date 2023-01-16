@@ -9,8 +9,8 @@ int main(void)
 
     const int screenWidth = 1200;
     const int screenHeight = 850;
-    StateManager stateManager;
-    stateManager.currentState = new MenuState();
+    StateManager *stateManager = StateManager::getInstance();
+    stateManager->currentState = new MenuState();
 
     InitWindow(screenWidth, screenHeight, "Contest");
 
@@ -20,15 +20,15 @@ int main(void)
     {
         if (IsKeyPressed(KEY_A))
         {
-            stateManager.SwitchState(new GameState());
+            stateManager->SwitchState(new GameState());
         }
         if (IsKeyPressed(KEY_L))
         {
-            stateManager.SwitchState(new MenuState());
+            stateManager->SwitchState(new MenuState());
         }
 
-        stateManager.currentState->Update();
-        stateManager.currentState->Draw();
+        stateManager->currentState->Update();
+        stateManager->currentState->Draw();
     }
     // De-Initialization
     //--------------------------------------------------------------------------------------

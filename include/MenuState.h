@@ -9,11 +9,12 @@ class MenuState : public State
 {
 private:
     Buttons buttons;
-    StateManager stateManager;
+    StateManager *stateManager;
 
 public:
     virtual void Update();
     virtual void Draw();
+    MenuState();
 };
 
 #endif
