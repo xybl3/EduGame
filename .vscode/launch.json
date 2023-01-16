@@ -1,0 +1,11 @@
+{
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "args": [
+                "-o game_win -L ./lib -lraylib -lopengl32 -lgdi32 -lwinmm -lkernel32 "
+            ]
+        }
+    ]
+}

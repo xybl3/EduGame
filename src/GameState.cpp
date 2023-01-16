@@ -4,7 +4,7 @@
 
 void GameState::Update()
 {
-    // Update game logic here
+    std::cout << false << std::endl;
 }
 
 void GameState::Draw()

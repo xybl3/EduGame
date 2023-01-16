@@ -5,6 +5,7 @@
 
 void MenuState::Update()
 {
+    std::cout << true << std::endl;
 }
 
 void MenuState::Draw()
