@@ -1,15 +1,12 @@
 #include <iostream>
 #include "../include/raylib.h"
-#include "../include/StateManager.h"
-#include "../include/MenuState.h"
 
 int main(void)
 {
 
     const int screenWidth = 1200;
     const int screenHeight = 850;
-    StateManager stateManager;
-    stateManager.currentState = new MenuState();
+    std::cout << "INitializing StateManager and window" << std::endl;
 
     InitWindow(screenWidth, screenHeight, "Contest");
 
@@ -17,8 +14,6 @@ int main(void)
 
     while (!WindowShouldClose())
     {
-        stateManager.currentState->Update();
-        stateManager.currentState->Draw();
     }
     // De-Initialization
     //--------------------------------------------------------------------------------------
